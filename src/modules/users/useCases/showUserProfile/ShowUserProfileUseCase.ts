@@ -12,9 +12,9 @@ class ShowUserProfileUseCase {
     const user = this.usersRepository.findById(user_id);
     if (!user) {
       throw new Error("Mensagem do erro");
+    } else {
+      return user;
     }
-
-    return user;
   }
 }
 
